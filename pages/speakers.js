@@ -1,8 +1,9 @@
 import Link from 'next/link'
 
-export default function schedule(){
+export default function speakers(){
     return(
-        <div className = "schedulePage">
+        <div className= "speakersPage">
+            
             <div className = "Navbar">
                 <div className = "leftNav">
                     <Link href = "https://acmutd.co/" className = "link">
@@ -25,9 +26,8 @@ export default function schedule(){
                 <button className= 'SigninButton'>Sign-in</button>
             </div>
             <h4>
-                Schedule
+                Speakers
             </h4>
         </div>
-        
     )
 }
