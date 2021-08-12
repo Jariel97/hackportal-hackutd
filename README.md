@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## HackPortal
 
-## Getting Started
+_A platform for user-friendly hackathon event management._
 
-First, run the development server:
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+## Set up
+
+First, make sure you have a working installation of Node.js and NPM.
+
+Now clone the repository and install dependencies:
+
+```
+git clone https://github.com/acmutd/hackportal
+cd hackportal
+npm install
+```
+
+Follow the instructions in the [set-up docs](./docs/set-up.md) to set up
+Firebase APIs before continuing.
+
+Now run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see
+the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project uses a few tools to enforce code quality:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [Prettier](https://prettier.io), an opinionated code formatter
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), a
+  format for consistent commit messages
+- [Commitizen](https://github.com/commitizen/cz-cli), a tool for easily making
+  formatted commits.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The repository already has these set up. Contributors only need to run
+`git commit`, and Commitizen will take care of the rest with a commit flow. If
+you would prefer to use your own IDE when making commits, make sure to follow
+the commit spec (Conventional Commits) below.
 
-## Learn More
+## Making Changes
 
-To learn more about Next.js, take a look at the following resources:
+### General Contributor Guidlines
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The custom Git hooks for the repository will reject your commits if they aren't
+formatted properly. This project uses the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+spec. Please read it before making your commits. Commits for this project take
+the form of:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+<type>[optional scope]: <description>
 
-## Deploy on Vercel
+[optional body]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[optional footer(s)]
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The easiest way to make commits is simply to use `git commit` from the command
+line. Commitizen will give you a prompt asking you for information to make your
+commit. An example of a properly formatted commit message:
+
+```
+feat(events): Allow user to favorite an event
+
+A user can now favorite events to add them to their personal schedule. Favorited
+events appear in a user's profile.
+```
+
+Non-trivial feature additions require explanation. Think of writing commit
+messages like writing little stories to other contributors about what you've
+done. The effort you put into writing a good commit message now will help later
+when you need to track down a bug or when someone else is understanding why a
+change was made.
+
+Please read [this](https://chris.beams.io/posts/git-commit/) to understand
+how to write a good commit message.
+
+You can use your IDE to make commits, but commitlint will reject
+improperly-formatted commit messages. As long as they're formatted properly,
+you can use your IDE (but `git commit` on the command line is probably easier).

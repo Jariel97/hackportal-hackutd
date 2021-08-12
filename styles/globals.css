@@ -1,19 +1,25 @@
 @font-face {
   font-family: 'Streamster';
-  src: url('../fonts/Streamster.ttf');
+  src: url('/fonts/streamster.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Outrun Future';
-  src: url("../fonts/Outrun\ future.otf");
+  src: url('/fonts/outrun-future.otf');
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'Neon 80s';
-  src: url("../fonts/Neon.ttf");
+  src: url('/fonts/neon.ttf');
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'Good Times';
-  src: url('../fonts/good\ times\ rg.ttf');
+  src: url('/fonts/good-times-rg.ttf');
+  font-display: swap;
 }
 
 html,
@@ -22,47 +28,209 @@ body {
   margin: 0;
   width: 100%;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Neon 80s, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #ffffff;
   background-color: #000000;
+}
+
+@media (max-width: 400px) {
+  div.joinButtons {
+    margin-top: -25px;
   }
 
-
-@media (max-width: 600px) {
-
-  h3.subTitle{
-    font-family: 'Outrun Future';
+  div.statsOne {
+    background: none;
+    margin-left: -20%;
   }
 
-  div.Navbar{
-    position: absolute;
-    text-align: center;
-    
-    font-family: 'Neon 80s';
-    font-style: normal;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-  
-    color: #ffffff;
+  div.statsTwo {
+    background: none;
+    margin-left: -40px;
   }
-
-  button.SigninButton{
-    font-family: 'Neon 80s';
-    color: #66E900;
-    border: 2px solid #66E900;
-    font-size: 100%;
-    margin-left: 15%;
-  }
-
-  div.joinButtons{
-    display: flex;
-    flex-direction: column;
+  div.statsThree {
+    background: none;
+    margin-left: -60px;
   }
 }
 
+.scheduledot {
+  background-color: #66e900;
+  box-shadow: 0px 0px 4px #66e900;
+}
 
+button.SigninButton {
+  font-family: 'Neon 80s';
+  width: 100px;
+  color: #66e900;
+  border: 2px solid #66e900;
+  @apply p-2;
+}
+
+@media (max-width: 600px) {
+  div.Navbar {
+    display: none !important;
+  }
+
+  div.SidebarMobile {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: left;
+    position: relative;
+  }
+
+  a.logo {
+    display: flex;
+    align-content: left;
+    margin: 10px;
+  }
+
+  div.SidebarLinks {
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    position: fixed;
+    font-size: 25px;
+    background-color: #000000;
+    margin-top: 80px;
+    padding: 30px;
+  }
+
+  div.link {
+    font-family: 'Neon 80s';
+    padding: 8px 0px 15px 16px;
+    cursor: pointer;
+  }
+
+  span {
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50%;
+    display: inline-flex;
+    margin-right: 10px;
+  }
+
+  span.speakerdot {
+    background-color: #ffd600;
+    box-shadow: 0px 0px 4px #ffd600;
+  }
+
+  span.sponsordot {
+    background-color: #ff00e5;
+    box-shadow: 0px 0px 4px #ff00e5;
+  }
+
+  span.faqdot {
+    background-color: #00e0ff;
+    box-shadow: 0px 0px 4px #00e0ff;
+  }
+
+  div.Jumbotron {
+    justify-content: center !important;
+    align-content: center;
+    width: 100% !important;
+    margin: -10px;
+  }
+
+  div.TitleScreen {
+    margin-top: -50px !important;
+    background-size: contain, cover, cover;
+    background-position-y: 330px, 70px, 100px !important;
+  }
+
+  h1.Eventname {
+    font-size: 300% !important;
+  }
+
+  h3.subTitle {
+    font-size: 130% !important;
+  }
+
+  div.joinButtons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 200px !important;
+    background-size: 100% 100% !important;
+  }
+
+  button.HackerButton {
+    margin: 10px !important;
+  }
+
+  button.MentorButton {
+    margin: 10px !important;
+  }
+
+  button.SponserButton {
+    margin: 10px !important;
+  }
+
+  div.date {
+    display: flex;
+    margin-top: 150px;
+    font-size: 100% !important;
+  }
+
+  div.Stats {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  div.Statsright {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-left: 0 !important;
+    margin-bottom: 50px;
+  }
+
+  div.statsOne {
+    width: 150px;
+    background-size: 100% 100% !important;
+  }
+
+  div.AboutHackUTD {
+    display: flex;
+  }
+
+  /*FAQ css for mobile*/
+  h4.faqTitle {
+    display: none;
+  }
+
+  h4.faqTitle-mobile {
+    display: flex !important;
+    justify-content: center;
+    text-align: center !important;
+    margin: 0 !important;
+    font-family: 'Good Times';
+    font-size: 56px;
+    color: #00e0ff;
+    text-shadow: 0px 4px 4px #ad00ff;
+  }
+
+  div.faqs {
+    width: 80% !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-top: 10px;
+  }
+
+  div.leftFacts {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  div.rightFacts {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
 
 a {
   color: inherit;
@@ -75,13 +243,16 @@ a {
 
 button {
   font-family: 'Good Times';
-  border-radius: 15%;
+  border-radius: 45%;
   background-color: #000000;
-  text-shadow: 0px 0px 6px #00E0FF;
-  
+  text-shadow: 0px 0px 6px #00e0ff;
 }
 
-div.Navbar{
+div.SidebarMobile {
+  display: none;
+}
+
+div.Navbar {
   padding: 1%;
   position: relative;
   text-align: center;
@@ -98,136 +269,188 @@ div.Navbar{
   z-index: 1;
 }
 
-div.leftNav{
+div.leftNav {
   display: flex;
   justify-content: space-around;
   flex-basis: 300px;
   align-items: center;
-  
 }
 
-a.link{
-  padding-right: 30px;
+a.link {
+  /* padding-right: 30px; */
+  font-family: 'Neon 80s';
+  align-items: center;
+  justify-content: center;
+  display: flex-center;
+  @apply px-4;
 }
-img{
+
+img {
   margin-right: 30px;
 }
 
-button.SigninButton{
+button.SigninButton {
+  border-radius: 15% !important;
   font-family: 'Neon 80s';
-  color: #66E900;
-  border: 2px solid #66E900;
-  font-size: 100%;
+  color: #66e900;
+  border: 2px solid #66e900;
 }
 
-div.Jumbotron{
-  background-image: url('../public/HackUTD8Assets/NightSkyDesktop.svg'), url(../public/HackUTD8Assets/Sun.svg), url(../public/HackUTD8Assets/Dallas.svg), url(../public/HackUTD8Assets/Ground.svg);
-  background-position: cover, center top, center, center bottom;
-  background-size: cover;
+div.Jumbotron {
   width: 100%;
-  min-height: 100%;
-  
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
-h1.Eventname{
+div.TitleScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  background-image: url('/assets/dallas.svg'), url('/assets/sun.svg'),
+    url('/assets/night-sky-desktop.svg');
+  background-position-x: center;
+  background-position-y: 240px, -50px, top;
+  background-size: absolute, absolute, cover !important;
+  background-repeat: no-repeat;
+}
+
+h1.Eventname {
+  user-select: none;
   font-family: 'Good Times';
   font-size: 100px;
   margin: 0;
 }
 
-h2.ACMname{
+h2.ACMname {
+  user-select: none;
   font-family: 'Streamster';
-  text-shadow: 3px 3px 8px #FF00E5;
+  text-shadow: 0px 3px 8px #ff00e5;
   color: transparent;
-  background-image: linear-gradient(to right, #E500F3, #a70761 70%);
+  background-image: linear-gradient(to right, #e500f3, #a70761 70%);
   background-clip: text;
   margin: 0;
   font-size: 30px;
 }
 
-h3.subTitle{
+h3.subTitle {
+  user-select: none;
   font-family: 'Outrun Future';
-  text-shadow: 4px 4px 15px #AD00FF;
   font-style: normal;
-  font-weight: normal;  
+  font-weight: normal;
   color: transparent;
-  background-image: linear-gradient(to right, #00B6F9, #006CD1);
+  text-shadow: #000000;
+  background-image: linear-gradient(to right, #00b6f9, #006cd1);
   background-clip: text;
   margin: 0;
   font-size: 35px;
 }
 
-button.HackerButton{
-  color: #00E0FF;
-  border: 2px solid #00E0FF;
-  padding: 10px;
-  margin: 30px;
-  box-shadow: 0px 0px 6px #00E0FF;
+div.joinButtons {
+  background-image: url('/assets/ground.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  height: 150px;
 }
 
-button.MentorButton{
-  color: #66E900;
-  border: 2px solid #66E900;
+button.HackerButton {
+  color: #00e0ff;
+  border: 2px solid #00e0ff;
   padding: 10px;
   margin: 30px;
-  box-shadow: 0px 0px 6px #00E0FF;
+  box-shadow: 0px 0px 6px #00e0ff;
 }
 
-button.SponserButton{
-  color: #FFD600;
-  border: 2px solid #FFD600;
+button.MentorButton {
+  color: #66e900;
+  border: 2px solid #66e900;
   padding: 10px;
   margin: 30px;
-  box-shadow: 0px 0px 6px #00E0FF;
+  box-shadow: 0px 0px 6px #00e0ff;
 }
 
-div.Stats{
+button.SponserButton {
+  color: #ffd600;
+  border: 2px solid #ffd600;
+  padding: 10px;
+  margin: 30px;
+  box-shadow: 0px 0px 6px #00e0ff;
+}
+
+div.date {
+  font-family: 'Good Times';
+  font-size: 56px;
+  color: #ffd600;
+  text-shadow: 0px 4px 4px #ff00e5;
+  justify-content: center;
+  align-self: center;
+  padding-bottom: 50px;
+}
+
+div.Stats {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
-div.Statsright{
-  padding-left: 3%;
-  display: grid;
-  gap: 10px;
-  grid-template-rows: repeat(2, 1fr);
-  grid-auto-columns: minmax(100px, auto);
+div.Statsright {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
 }
 
-div.video{
+div.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: inherit;
+  justify-content: center;
+}
+
+div.video {
   padding-right: 2%;
 }
-.statsOne{
-  grid-row: 1;
-  grid-column: 2;
-  background: url("../public/HackUTD8Assets/Ring\ Accent.svg");
+
+.statsOne {
+  font-size: 180%;
+  background: url('/assets/ring-accent.svg');
+  background-position: center;
+  background-size: 100% 100%;
 }
 
-.statsTwo{
-  grid-row: 2;
-  grid-column: 1;
-  background: url(../public/HackUTD8Assets/Ring\ Accent.svg);
+.statsTwo {
+  font-size: 180%;
+  width: 150px;
+  background: url('/assets/ring-accent.svg');
+  background-position: center;
+  background-size: 100% 100%;
 }
 
-.statsThree{
-  grid-row: 2;
-  grid-column: 3;
-  background: url(../public/HackUTD8Assets/Ring\ Accent.svg);
+.statsThree {
+  font-size: 180%;
+  width: 150px;
+  background: url('/assets/ring-accent.svg');
+  background-position: center;
+  background-size: 100% 100%;
 }
-h5.Info{
-  color: #FF00E5;
+
+h5.Info {
+  color: #ff00e5;
   font-family: 'Neon 80s';
+  margin-bottom: 1px;
 }
 
-h6.Info{
-  color: #00E0FF;
+h6.Info {
+  color: #00e0ff;
   font-family: 'Neon 80s';
+  margin-top: 1px;
 }
 
-div.AboutHackUTD{
+div.AboutHackUTD {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,17 +461,144 @@ div.AboutHackUTD{
   padding: 10px;
 }
 
-h4.Subtitle{
-  padding-right: 770px;
+h4.Subtitle {
   font-family: 'Good Times';
   font-style: normal;
   font-weight: normal;
-  color: #00E0FF;
-  text-shadow: 0px 4px 4px #FF0000;
+  color: #00e0ff;
+  text-shadow: 0px 4px 4px #ff0000;
+  text-align: left;
+  max-width: 950px;
 }
 
-p.paragraph{
+p.paragraph {
+  padding-left: 50px;
+  padding-right: 50px;
   max-width: 950px;
   font-family: 'Neon 80s';
   font-style: normal;
+}
+
+/* This point on is css conserning faq page*/
+div.mainFAQSContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: left;
+}
+
+h4.faqTitle-mobile {
+  display: none;
+}
+
+h4.faqTitle {
+  width: 700px;
+  font-family: 'Good Times';
+  font-size: 56px;
+  line-height: 67px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  color: #00e0ff;
+  text-shadow: 0px 4px 4px #ad00ff;
+}
+
+div.faqs {
+  width: 1250px;
+  font-family: 'Neon 80s';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.leftFacts {
+  width: 40%;
+  margin-right: 5%;
+}
+
+div.rightFacts {
+  width: 40%;
+  margin-left: 5%;
+}
+
+div.facts {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+div.facts:hover {
+  cursor: pointer;
+}
+
+div.faqMiniTitles {
+  display: flex;
+  flex-direction: row;
+}
+
+h3.answers {
+  font-size: 16px;
+}
+
+/*End for css conserning faq page*/
+
+/*css for other pages*/
+.sponsorsMainPage {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+.sponsorsTitle {
+  display: flex;
+  font-size: 56px;
+  line-height: 67px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  font-family: 'Good Times';
+  color: #ff00e5;
+  text-shadow: 0px 4px 4px #00e0ff;
+}
+
+.speakersMainPage {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+.speakersTitle {
+  display: flex;
+  font-size: 56px;
+  line-height: 67px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  font-family: 'Good Times';
+  color: #ffd600;
+  text-shadow: 0px 4px 4px #ff0000;
+}
+
+.scheduleMainPage {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+.scheduleTitle {
+  display: flex;
+  font-size: 56px;
+  line-height: 67px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  font-family: 'Good Times';
+  color: #66e900;
+  text-shadow: 0px 4px 4px #ff00e5;
+}
+
+h5 {
+  font-size: 30px;
 }
