@@ -1,5 +1,3 @@
-import MobileHeader from '../components/MobileHeader';
-import MobileLinks from '../components/MobileLinks';
 
 export default function speakers() {
   return (

@@ -23,13 +23,13 @@ export default function AppHeader() {
 
   return (
     <>
-      <header className="flex flex-row justify-between sticky p-2 md:p-4 bg-gray-900 shadow-md">
-        <Link href="/">
-          <a className="flex font-display self-center inline-block" onClick={dismissDialog}>
-            <HackUTDLogo />
-            <span>HackUTD</span>
-          </a>
-        </Link>
+      <header className="top-0 sticky flex flex-row justify-between p-2 md:p-4 bg-black shadow-md items-center">
+      <Link href="/">
+            <a className="flex font-display self-center inline-block items-center" onClick={dismissDialog}>
+              <HackUTDLogo />
+              <span className="text-2xl">HackUTD</span>
+            </a>
+          </Link>
         <div className="md:flex justify-center text-xl font-header md:text-left">
           <Link href="/schedule">
             <a onClick={dismissDialog}>
